@@ -56,7 +56,7 @@ defmodule Cluster.Strategy do
             acc
 
           false ->
-            Cluster.Logger.warn(topology, "unable to connect to #{inspect(n)}")
+            Cluster.Logger.debug(topology, "unable to connect to #{inspect(n)}")
             [{n, false} | acc]
 
           :ignored ->
